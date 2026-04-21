@@ -1,0 +1,29 @@
+/* Warm striped placeholder system for imagery */
+.ph {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ph-bg, #efe6d6);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 14px,
+    rgba(139, 90, 43, 0.06) 14px 15px
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: #6b5239;
+}
+.ph--dark { --ph-bg: #2b2418; color: #d9c8ad; }
+.ph--dark { background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,0.04) 14px 15px); }
+.ph--blue { --ph-bg: #e4ecf3; color: #204a6b; }
+.ph--green { --ph-bg: #e8eee0; color: #3f5a25; }
+.ph--orange { --ph-bg: #f5ebd9; color: #8b5421; }
+.ph__label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  opacity: 0.85;
+}
+.ph__label::before { content: "▮ "; opacity: 0.6; }
