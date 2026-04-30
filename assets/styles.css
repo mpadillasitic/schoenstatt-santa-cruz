@@ -463,14 +463,13 @@ section.tight { padding-block: clamp(60px, 8vw, 120px); }
   display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 80px); align-items: center;
 }
 .santuario__visual {
-  aspect-ratio: 5/6; border-radius: 4px; overflow: hidden; position: relative;
+  aspect-ratio: 5/6; border-radius: 4px; overflow: hidden; position: relative; min-height: 400px;
 }
+.santuario__visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
 .santuario__visual .ph { position: absolute; inset: 0; }
 .santuario__visual::before {
   content: ""; position: absolute; inset: 0;
-  background:
-    linear-gradient(180deg, rgba(10,15,25,0.25) 0%, rgba(10,15,25,0.5) 100%),
-    linear-gradient(135deg, #3d5a78 0%, #1a2d44 100%);
+  background: linear-gradient(180deg, rgba(10,15,25,0.15) 0%, rgba(10,15,25,0.45) 100%);
   z-index: 1;
 }
 .santuario__visual svg.chapel {
